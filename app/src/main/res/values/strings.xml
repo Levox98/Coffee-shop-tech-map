@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Рецепты</string>
+    <string name="ctg_name_coffee">Кофе</string>
+    <string name="ctg_name_tea">Чай</string>
+    <string name="ctg_name_cocoa">Гор. шоколад/Какао</string>
+    <string name="ctg_name_fresh">Фреши</string>
+    <string name="ctg_name_milkshake">Милкшейки</string>
+    <string name="ctg_name_smoothie">Смузи</string>
+    <string name="ctg_name_cold_drink">Холодные напитки</string>
+    <string name="ctg_name_author_drink">Авторские напитки</string>
+    <string name="ctg_name_mulled_wine">Глинтвейн</string>
+
+</resources>

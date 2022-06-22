@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="coffeeImages">
+        <item>@drawable/ic_coffee</item>
+        <item>@drawable/ic_coffee</item>
+        <item>@drawable/ic_coffee</item>
+        <item>@drawable/ic_coffee</item>
+        <item>@drawable/ic_coffee</item>
+        <item>@drawable/ic_coffee</item>
+        <item>@drawable/ic_coffee</item>
+        <item>@drawable/ic_coffee</item>
+        <item>@drawable/ic_coffee</item>
+        <item>@drawable/ic_coffee</item>
+        <item>@drawable/ic_coffee</item>
+        <item>@drawable/ic_coffee</item>
+    </array>
+    
+    <string-array name="coffeeNames">
+        <item>Американо 250мл</item>
+        <item>Американо 400мл</item>
+        <item>Капучино 200мл</item>
+        <item>Капучино 350мл</item>
+        <item>Капучино 500мл</item>
+        <item>Латте 200мл</item>
+        <item>Латте 350мл</item>
+        <item>Латте 500мл</item>
+        <item>Раф 350мл</item>
+        <item>Раф 500мл</item>
+        <item>Flat White 250мл</item>
+        <item>Flat White 350мл</item>
+    </string-array>
+
+    <string-array name="coffeeIngredients">
+        <item>ДОПИО, 200мл воды</item>
+        <item>ТРИПЛО, 350мл воды</item>
+        <item>ЭСПРЕССО, 150мл молока</item>
+        <item>ДОПИО, 190мл молока</item>
+        <item>ТРИПЛО, 320мл молока</item>
+        <item>ЭСПРЕССО, 150мл молока</item>
+        <item>ЭСПРЕССО, 190мл молока</item>
+        <item>ДОПИО, 320мл молока</item>
+        <item>ДОПИО, 100мл молока</item>
+        <item>ТРИПЛО, 180мл молока</item>
+        <item>ДОПИО, 50мл молока, 100мл сливок, 20мл сиропа</item>
+        <item>ТРИПЛО, 70мл молока, 150мл молока, 20мл сиропа</item>
+    </string-array>
+    
+    <string-array name="coffeeRecipes">
+        <item>Налить в тару кипятка 1 см до края, подставить под холдер и сварить ДОПИО</item>
+        <item>Налить в тару кипятка 1 см до края, подставить под холдер и сварить ТРИПЛО</item>
+        <item>Проливаем ЭСПРЕССО в тару, пеним молоко, вливаем молоко в ЭСПРЕССО</item>
+        <item>Проливаем ДОПИО в тару, пеним молоко, вливаем молоко в ДОПИО</item>
+        <item>Проливаем ТРИПЛО в стакан 400, на тройном холдере пеним молоко, вливаем молоко в кофею Подаём только в БУМ стакане</item>
+        <item>Пеним молоко, вливаем в тару, делаем ЭСПРЕССО в мал. питчере, вливаем кофе в молоко</item>
+        <item>Пеним молоко, вливаем в тару, делаем ЭСПРЕССО в мал. питчере, вливаем кофе в молоко</item>
+        <item>Пеним молоко, вливаем в тару, делаем ДОПИО в мал. питчере, вливаем кофе в молоко</item>
+        <item>Проливаем ДОПИО в тару, пеним молоко, вливаем молоко в ДОПИО</item>
+        <item>Проливаем ТРИПЛО в тару, пеним молоко, вливаем молоко в ТРИПЛО</item>
+        <item>Проливаем ДОПИО в питчер, затем в этот же питчер вливаем остальные ингредиенты. Пеним всё содержимое вместе и переливаем в тару</item>
+        <item>Проливаем ТРИПЛО в питчер, затем в этот же питчер вливаем остальные ингредиенты. Пеним всё содержимое вместе и переливаем в тару</item>
+    </string-array>
+    
+</resources>
