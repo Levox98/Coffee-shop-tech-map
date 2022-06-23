@@ -53,8 +53,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.id_category_tea -> {
                 Toast.makeText(this, "TEA", Toast.LENGTH_SHORT).show()
             }
-            R.id.id_category_cocoa -> Toast.makeText(this, "COCOA",
-                Toast.LENGTH_SHORT).show()
+            R.id.id_category_cocoa -> {
+                Toast.makeText(this, "COCOA", Toast.LENGTH_SHORT).show()
+                adapter?.updateAdapter(fillInfo(getImageId(R.array.cocoaImages),
+                    resources.getStringArray(R.array.cocoaNames),
+                    resources.getStringArray(R.array.cocoaIngredients),
+                    resources.getStringArray(R.array.cocoaRecipes)))
+            }
             R.id.id_category_cold_drink -> Toast.makeText(this, "COLD DRINK",
                 Toast.LENGTH_SHORT).show()
             R.id.id_category_smoothie -> Toast.makeText(this, "SMOOTHIE",

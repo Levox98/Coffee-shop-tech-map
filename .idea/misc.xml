@@ -8,6 +8,8 @@
         <entry key="app/src/main/res/drawable-anydpi/ic_cold_drink.xml" value="0.1145" />
         <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.125" />
+        <entry key="app/src/main/res/layout/full-content_layout.xml" value="0.19628286491387126" />
+        <entry key="app/src/main/res/layout/full_content_layout.xml" value="0.19628286491387126" />
         <entry key="app/src/main/res/layout/header_main_menu.xml" value="0.24184329267861188" />
         <entry key="app/src/main/res/layout/item_layout.xml" value="0.39035797119140625" />
         <entry key="app/src/main/res/layout/main_content.xml" value="0.19628286491387126" />
