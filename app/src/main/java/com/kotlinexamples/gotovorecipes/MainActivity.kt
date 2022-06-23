@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     lateinit var binding: ActivityMainBinding
 
     var adapter: ContentAdapter? = null
+    var recyclerView: RecyclerView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         binding.idNavigationView.setNavigationItemSelectedListener(this)
 
-        val recyclerView: RecyclerView = binding.idLayoutMain.idConstraintLayoutMain
+        recyclerView = binding.idLayoutMain.idConstraintLayoutMain
             .findViewById(R.id.id_recycler_view_main)
 
         val list = ArrayList<ListItem>()
@@ -35,10 +36,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             resources.getStringArray(R.array.coffeeIngredients),
             resources.getStringArray(R.array.coffeeRecipes)))
 
-        recyclerView.hasFixedSize()
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView?.hasFixedSize()
+        recyclerView?.layoutManager = LinearLayoutManager(this)
         adapter = ContentAdapter(list, this)
-        recyclerView.adapter = adapter
+        recyclerView?.adapter = adapter
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -49,9 +50,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     resources.getStringArray(R.array.coffeeNames),
                     resources.getStringArray(R.array.coffeeIngredients),
                     resources.getStringArray(R.array.coffeeRecipes)))
+                recyclerView?.layoutManager?.scrollToPosition(0)
             }
             R.id.id_category_tea -> {
                 Toast.makeText(this, "TEA", Toast.LENGTH_SHORT).show()
+                adapter?.updateAdapter(fillInfo(getImageId(R.array.teaImages),
+                    resources.getStringArray(R.array.teaNames),
+                    resources.getStringArray(R.array.teaIngredients),
+                    resources.getStringArray(R.array.teaRecipes)))
+                recyclerView?.layoutManager?.scrollToPosition(0)
             }
             R.id.id_category_cocoa -> {
                 Toast.makeText(this, "COCOA", Toast.LENGTH_SHORT).show()
@@ -59,19 +66,48 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     resources.getStringArray(R.array.cocoaNames),
                     resources.getStringArray(R.array.cocoaIngredients),
                     resources.getStringArray(R.array.cocoaRecipes)))
+                recyclerView?.layoutManager?.scrollToPosition(0)
             }
-            R.id.id_category_cold_drink -> Toast.makeText(this, "COLD DRINK",
-                Toast.LENGTH_SHORT).show()
-            R.id.id_category_smoothie -> Toast.makeText(this, "SMOOTHIE",
-                Toast.LENGTH_SHORT).show()
-            R.id.id_category_fresh -> Toast.makeText(this, "FRESH",
-                Toast.LENGTH_SHORT).show()
-            R.id.id_category_milkshake -> Toast.makeText(this, "MILKSHAKE",
-                Toast.LENGTH_SHORT).show()
-            R.id.id_category_mulled_wine -> Toast.makeText(this, "GLYNTWEIN",
-                Toast.LENGTH_SHORT).show()
-            R.id.id_category_author_drink -> Toast.makeText(this, "AUTHOR",
-                Toast.LENGTH_SHORT).show()
+            R.id.id_category_cold_drink -> {
+                Toast.makeText(this, "COLD DRINK", Toast.LENGTH_SHORT).show()
+                adapter?.updateAdapter(fillInfo(getImageId(R.array.cdImages),
+                    resources.getStringArray(R.array.cdNames),
+                    resources.getStringArray(R.array.cdIngredients),
+                    resources.getStringArray(R.array.cdRecipes)))
+                recyclerView?.layoutManager?.scrollToPosition(0)
+            }
+            R.id.id_category_smoothie -> {
+                Toast.makeText(this, "SMOOTHIE", Toast.LENGTH_SHORT).show()
+                adapter?.updateAdapter(fillInfo(getImageId(R.array.smoothieImages),
+                    resources.getStringArray(R.array.smoothieNames),
+                    resources.getStringArray(R.array.smoothieIngredients),
+                    resources.getStringArray(R.array.smoothieRecipes)))
+                recyclerView?.layoutManager?.scrollToPosition(0)
+            }
+            R.id.id_category_fresh -> {
+                Toast.makeText(this, "FRESH", Toast.LENGTH_SHORT).show()
+                adapter?.updateAdapter(fillInfo(getImageId(R.array.freshImages),
+                    resources.getStringArray(R.array.freshNames),
+                    resources.getStringArray(R.array.freshIngredients),
+                    resources.getStringArray(R.array.freshRecipes)))
+                recyclerView?.layoutManager?.scrollToPosition(0)
+            }
+            R.id.id_category_milkshake -> {
+                Toast.makeText(this, "MILKSHAKE", Toast.LENGTH_SHORT).show()
+                recyclerView?.layoutManager?.scrollToPosition(0)
+            }
+            R.id.id_category_mulled_wine -> {
+                Toast.makeText(this, "GLYNTWEIN", Toast.LENGTH_SHORT).show()
+                adapter?.updateAdapter(fillInfo(getImageId(R.array.glyntweinImages),
+                    resources.getStringArray(R.array.glyntweinNames),
+                    resources.getStringArray(R.array.glyntweinIngredients),
+                    resources.getStringArray(R.array.glyntweinRecipes)))
+                recyclerView?.layoutManager?.scrollToPosition(0)
+            }
+            R.id.id_category_author_drink -> {
+                Toast.makeText(this, "AUTHOR", Toast.LENGTH_SHORT).show()
+                recyclerView?.layoutManager?.scrollToPosition(0)
+            }
         }
         return true
     }

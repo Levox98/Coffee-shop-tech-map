@@ -21,14 +21,10 @@ class ContentAdapter(itemArray: ArrayList<ListItem>, context: Context) : Recycle
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val image = view.findViewById<ImageView>(R.id.id_content_main_image)
         val tvTitle = view.findViewById<TextView>(R.id.id_content_name)
-        //val tvIngredients = view.findViewById<TextView>(R.id.id_tv_ingredients)
-        //val tvRecipe = view.findViewById<TextView>(R.id.id_content_recipe)
 
         fun bind(listItem: ListItem, context: Context) {
             image.setImageResource(listItem.imageId)
             tvTitle.text = listItem.titleText
-            //tvIngredients.text = listItem.ingredientText
-            //tvRecipe.text = listItem.recipeText
 
             itemView.setOnClickListener() {
                 Toast.makeText(context, "Pressed: ${tvTitle.text}", Toast.LENGTH_SHORT).show()

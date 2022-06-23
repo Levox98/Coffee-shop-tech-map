@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="cdImages">
+        <item>@drawable/ic_coffee</item>
+        <item>@drawable/ic_coffee</item>
+    </array>
+
+    <string-array name="cdNames">
+        <item>Айс капучино</item>
+        <item>Глиссе</item>
+    </string-array>
+
+    <string-array name="cdIngredients">
+        <item>ДОПИО, молоко 110мл, лёд 100г, сахарный сироп 8мл</item>
+        <item>ДОПИО, вода 150мл, мороженое 50г</item>
+    </string-array>
+
+    <string-array name="cdRecipes">
+        <item>Все инргедиенты поместить в блендер,взбить до однородности, перелить в стакан для
+            подачи. Влить кофе</item>
+        <item>Налить в тару кипятка 1 см до края. Подставить под холдер и влить ДОПИО. Положить
+            шарик мороженого в кофе</item>
+    </string-array>
+</resources>
