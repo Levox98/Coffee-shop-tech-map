@@ -14,10 +14,10 @@ import com.kotlinexamples.gotovorecipes.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
-    lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding
 
-    var adapter: ContentAdapter? = null
-    var recyclerView: RecyclerView? = null
+    private var adapter: ContentAdapter? = null
+    private var recyclerView: RecyclerView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -94,6 +94,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             R.id.id_category_milkshake -> {
                 Toast.makeText(this, "MILKSHAKE", Toast.LENGTH_SHORT).show()
+                adapter?.updateAdapter(fillInfo(getImageId(R.array.milkshakeImages),
+                    resources.getStringArray(R.array.milkshakeNames),
+                    resources.getStringArray(R.array.milkshakeIngredients),
+                    resources.getStringArray(R.array.milkshakeRecipes)))
                 recyclerView?.layoutManager?.scrollToPosition(0)
             }
             R.id.id_category_mulled_wine -> {
@@ -106,26 +110,30 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             R.id.id_category_author_drink -> {
                 Toast.makeText(this, "AUTHOR", Toast.LENGTH_SHORT).show()
+                adapter?.updateAdapter(fillInfo(getImageId(R.array.adImages),
+                    resources.getStringArray(R.array.adNames),
+                    resources.getStringArray(R.array.adIngredients),
+                    resources.getStringArray(R.array.adRecipes )))
                 recyclerView?.layoutManager?.scrollToPosition(0)
             }
         }
         return true
     }
 
-    fun fillInfo(imageArray: IntArray, titleArray: Array<String>,
-                 ingredientsArray: Array<String>,
-                 recipeArray: Array<String>): List<ListItem> {
+    private fun fillInfo(imageArray: IntArray, titleArray: Array<String>,
+                         ingredientsArray: Array<String>,
+                         recipeArray: Array<String>): List<ListItem> {
         val listItemArray = ArrayList<ListItem>()
 
         for (i in titleArray.indices) {
-            var listItem = ListItem(imageArray[i], titleArray[i], ingredientsArray[i], recipeArray[i])
+            val listItem = ListItem(imageArray[i], titleArray[i], ingredientsArray[i], recipeArray[i])
             listItemArray.add(listItem)
         }
 
         return listItemArray
     }
 
-    fun getImageId(imageArrayId: Int): IntArray {
+    private fun getImageId(imageArrayId: Int): IntArray {
         val typedArray: TypedArray = resources.obtainTypedArray(imageArrayId)
         val count = typedArray.length()
         val ids = IntArray(count)

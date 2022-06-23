@@ -1,2 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <array name="milkshakeImages">
+        <item>@drawable/ic_cold_drink</item>
+        <item>@drawable/ic_cold_drink</item>
+        <item>@drawable/ic_cold_drink</item>
+        <item>@drawable/ic_cold_drink</item>
+        <item>@drawable/ic_cold_drink</item>
+        <item>@drawable/ic_cold_drink</item>
+        <item>@drawable/ic_cold_drink</item>
+        <item>@drawable/ic_cold_drink</item>
+        <item>@drawable/ic_cold_drink</item>
+        <item>@drawable/ic_cold_drink</item>
+        <item>@drawable/ic_cold_drink</item>
+        <item>@drawable/ic_cold_drink</item>
+    </array>
+
+    <string-array name="milkshakeNames">
+        <item>Бодрая черника 250мл</item>
+        <item>Бодрая черника 500мл</item>
+        <item>Вишнёвый БУМ 250мл</item>
+        <item>Вишнёвый БУМ 500мл</item>
+        <item>Клубничный фриз 250мл</item>
+        <item>Клубничный фриз 500мл</item>
+        <item>Мятный 250мл</item>
+        <item>Мятный 500мл</item>
+        <item>Шоколадно-банановый 250мл</item>
+        <item>Шоколадно-банановый 500мл</item>
+        <item>Шоколдано-кофейный 250мл</item>
+        <item>Шоколдано-кофейный 500мл</item>
+    </string-array>
+
+    <string-array name="milkshakeIngredients">
+        <item>Молоко 120мл, черника 50г, банан 80г, лёд 20г, сироп Ежевика 10мл</item>
+        <item>Молоко 240мл, черника 75г, банан 160г, лёд 20г, сироп Ежевика 20мл</item>
+        <item>Молоко 120мл, мороженое 50г, лёд 20г, сироп Малина 20мл, вишня 40г</item>
+        <item>Молоко 240мл, мороженое 100г, лёд 40г, сироп Малина 40мл, вишня 80г</item>
+        <item>Клубника 40г, молоко 110г, мороженое 40г, лёд 20г, сироп 10мл</item>
+        <item>Клубника 60г, молоко 220г, мороженое 80г, лёд 20г, сироп 20мл</item>
+        <item>Молоко 120мл, мороженое 50г, лёд 20г, сироп Мята 20мл, Печ. Мед. Гвоздика 1шт</item>
+        <item>Молоко 240мл, мороженое 100г, лёд 40г, сироп Мята 40мл, Печ. Мед. Гвоздика 1шт</item>
+        <item>Банан 80г, молоко 150г, мороженое 25г, какао 5г, лёд 20г</item>
+        <item>Банан 140г, молоко 280г, мороженое 50г, какао 10г, лёд 20г</item>
+        <item>Молоко 120мл, мороженое 50г, лёд 20г, топпинг Шоколад 25г, ДОПИО</item>
+        <item>Молоко 240мл, мороженое 100г, лёд 40г, топпинг Шоколад 50г, ТРИПЛО</item>
+    </string-array>
+
+    <string-array name="milkshakeRecipes">
+        <item>Взбить все ингредиенты в блендере. Перелить в стакан.</item>
+        <item>Взбить все ингредиенты в блендере. Перелить в стакан.</item>
+        <item>Взбить все ингредиенты в блендере. Перелить в стакан.</item>
+        <item>Взбить все ингредиенты в блендере. Перелить в стакан.</item>
+        <item>Взбить все ингредиенты в блендере. Перелить в стакан.</item>
+        <item>Взбить все ингредиенты в блендере. Перелить в стакан.</item>
+        <item>Взбить все ингредиенты в блендере. Перелить в стакан.</item>
+        <item>Взбить все ингредиенты в блендере. Перелить в стакан.</item>
+        <item>Взбить все ингредиенты в блендере. Перелить в стакан.</item>
+        <item>Взбить все ингредиенты в блендере. Перелить в стакан.</item>
+        <item>Взбить все ингредиенты в блендере. Перелить в стакан.</item>
+        <item>Взбить все ингредиенты в блендере. Перелить в стакан.</item>
+    </string-array>
+</resources>
