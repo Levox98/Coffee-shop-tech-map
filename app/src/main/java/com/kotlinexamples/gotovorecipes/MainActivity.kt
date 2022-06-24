@@ -3,6 +3,7 @@ package com.kotlinexamples.gotovorecipes
 import android.content.res.TypedArray
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.view.Gravity
 import android.view.MenuItem
 import android.widget.Toast
@@ -18,6 +19,7 @@ import com.kotlinexamples.gotovorecipes.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var handler: Handler
 
     private var adapter: ContentAdapter? = null
     private var recyclerView: RecyclerView? = null
@@ -31,7 +33,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding.idNavigationView.setNavigationItemSelectedListener(this)
 
         drawerLayout = binding.drawerLayout
-        drawerLayout?.openDrawer(Gravity.LEFT)
+        drawerLayout?.openDrawer(GravityCompat.START)
 
         recyclerView = binding.idLayoutMain.idConstraintLayoutMain
             .findViewById(R.id.id_recycler_view_main)
@@ -54,12 +56,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.id_category_coffee -> {
-                adapter?.updateAdapter(fillInfo(getImageId(R.array.coffeeImages),
-                    resources.getStringArray(R.array.coffeeNames),
-                    resources.getStringArray(R.array.coffeeIngredients),
-                    resources.getStringArray(R.array.coffeeRecipes)))
+                adapter?.updateAdapter(
+                    fillInfo(
+                        getImageId(R.array.coffeeImages),
+                        resources.getStringArray(R.array.coffeeNames),
+                        resources.getStringArray(R.array.coffeeIngredients),
+                        resources.getStringArray(R.array.coffeeRecipes)
+                    )
+                )
                 recyclerView?.layoutManager?.scrollToPosition(0)
-                drawerLayout?.closeDrawer(Gravity.LEFT, true)
+                drawerLayout?.closeDrawer(GravityCompat.START, true)
             }
             R.id.id_category_tea -> {
                 adapter?.updateAdapter(fillInfo(getImageId(R.array.teaImages),
@@ -67,7 +73,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     resources.getStringArray(R.array.teaIngredients),
                     resources.getStringArray(R.array.teaRecipes)))
                 recyclerView?.layoutManager?.scrollToPosition(0)
-                drawerLayout?.closeDrawer(Gravity.LEFT, true)
+                drawerLayout?.closeDrawer(GravityCompat.START, true)
             }
             R.id.id_category_cocoa -> {
                 adapter?.updateAdapter(fillInfo(getImageId(R.array.cocoaImages),
@@ -75,7 +81,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     resources.getStringArray(R.array.cocoaIngredients),
                     resources.getStringArray(R.array.cocoaRecipes)))
                 recyclerView?.layoutManager?.scrollToPosition(0)
-                drawerLayout?.closeDrawer(Gravity.LEFT, true)
+
+                drawerLayout?.closeDrawer(GravityCompat.START, true)
             }
             R.id.id_category_cold_drink -> {
                 adapter?.updateAdapter(fillInfo(getImageId(R.array.cdImages),
@@ -83,7 +90,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     resources.getStringArray(R.array.cdIngredients),
                     resources.getStringArray(R.array.cdRecipes)))
                 recyclerView?.layoutManager?.scrollToPosition(0)
-                drawerLayout?.closeDrawer(Gravity.LEFT, true)
+                drawerLayout?.closeDrawer(GravityCompat.START, true)
             }
             R.id.id_category_smoothie -> {
                 adapter?.updateAdapter(fillInfo(getImageId(R.array.smoothieImages),
@@ -91,7 +98,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     resources.getStringArray(R.array.smoothieIngredients),
                     resources.getStringArray(R.array.smoothieRecipes)))
                 recyclerView?.layoutManager?.scrollToPosition(0)
-                drawerLayout?.closeDrawer(Gravity.LEFT, true)
+                drawerLayout?.closeDrawer(GravityCompat.START, true)
             }
             R.id.id_category_fresh -> {
                 adapter?.updateAdapter(fillInfo(getImageId(R.array.freshImages),
@@ -99,7 +106,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     resources.getStringArray(R.array.freshIngredients),
                     resources.getStringArray(R.array.freshRecipes)))
                 recyclerView?.layoutManager?.scrollToPosition(0)
-                drawerLayout?.closeDrawer(Gravity.LEFT, true)
+                drawerLayout?.closeDrawer(GravityCompat.START, true)
             }
             R.id.id_category_milkshake -> {
                 adapter?.updateAdapter(fillInfo(getImageId(R.array.milkshakeImages),
@@ -107,7 +114,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     resources.getStringArray(R.array.milkshakeIngredients),
                     resources.getStringArray(R.array.milkshakeRecipes)))
                 recyclerView?.layoutManager?.scrollToPosition(0)
-                drawerLayout?.closeDrawer(Gravity.LEFT, true)
+                drawerLayout?.closeDrawer(GravityCompat.START, true)
             }
             R.id.id_category_mulled_wine -> {
                 adapter?.updateAdapter(fillInfo(getImageId(R.array.glyntweinImages),
@@ -115,7 +122,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     resources.getStringArray(R.array.glyntweinIngredients),
                     resources.getStringArray(R.array.glyntweinRecipes)))
                 recyclerView?.layoutManager?.scrollToPosition(0)
-                drawerLayout?.closeDrawer(Gravity.LEFT, true)
+                drawerLayout?.closeDrawer(GravityCompat.START, true)
             }
             R.id.id_category_author_drink -> {
                 adapter?.updateAdapter(fillInfo(getImageId(R.array.adImages),
@@ -123,7 +130,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     resources.getStringArray(R.array.adIngredients),
                     resources.getStringArray(R.array.adRecipes )))
                 recyclerView?.layoutManager?.scrollToPosition(0)
-                drawerLayout?.closeDrawer(Gravity.LEFT, true)
+                drawerLayout?.closeDrawer(GravityCompat.START, true)
             }
             R.id.id_category_season_summer -> {
                 adapter?.updateAdapter(fillInfo(getImageId(R.array.sdImages),
@@ -131,7 +138,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     resources.getStringArray(R.array.sdIngredients),
                     resources.getStringArray(R.array.sdRecipes)))
                 recyclerView?.layoutManager?.scrollToPosition(0)
-                drawerLayout?.closeDrawer(Gravity.LEFT, true)
+                drawerLayout?.closeDrawer(GravityCompat.START, true)
             }
             R.id.id_category_season_winter -> {
                 adapter?.updateAdapter(fillInfo(getImageId(R.array.wdImages),
@@ -139,7 +146,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     resources.getStringArray(R.array.wdIngredients),
                     resources.getStringArray(R.array.wdRecipes)))
                 recyclerView?.layoutManager?.scrollToPosition(0)
-                drawerLayout?.closeDrawer(Gravity.LEFT, true)
+                drawerLayout?.closeDrawer(GravityCompat.START, true)
             }
         }
         return true
