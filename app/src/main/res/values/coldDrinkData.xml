@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="cdImages">
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
+        <item>@drawable/ic_cold_drink_general</item>
+        <item>@drawable/ic_cold_drink_general</item>
     </array>
 
     <string-array name="cdNames">

@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="freshImages">
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
+        <item>@drawable/ic_fresh_general</item>
+        <item>@drawable/ic_fresh_general</item>
+        <item>@drawable/ic_fresh_general</item>
+        <item>@drawable/ic_fresh_general</item>
+        <item>@drawable/ic_fresh_general</item>
+        <item>@drawable/ic_fresh_general</item>
+        <item>@drawable/ic_fresh_general</item>
+        <item>@drawable/ic_fresh_general</item>
+        <item>@drawable/ic_fresh_general</item>
+        <item>@drawable/ic_fresh_general</item>
     </array>
 
     <string-array name="freshNames">
         <item>Витамин 300мл</item>
         <item>Витамин 500мл</item>
-        <item>Кидз 300мл</item>
-        <item>Кидз 500мл</item>
         <item>Мятный цитрус 300мл</item>
         <item>Мятный цитрус 500мл</item>
         <item>Полезный 300мл</item>
@@ -33,8 +29,6 @@
     <string-array name="freshIngredients">
         <item>Грейпфрут 325г, киви очищенный 100г, яблоко 210г</item>
         <item>Грейпфрут 540г, киви очищенный 165г, яблоко 350г</item>
-        <item>Банан 160г, апельсин 300г, груша 220г</item>
-        <item>Банан 270г, апельсин 500г, груша 365г</item>
         <item>Грейпфрут 550г, сироп Мята 15мл</item>
         <item>Грейпфрут 900г, сироп Мята 25мл</item>
         <item>Сельдерей 60г, морковь 300г, яблоко 300г</item>
@@ -46,8 +40,6 @@
     </string-array>
 
     <string-array name="freshRecipes">
-        <item>Выжать сок из всех ингредиентов, в том порядке, в котором написано. Перелить в стакан.</item>
-        <item>Выжать сок из всех ингредиентов, в том порядке, в котором написано. Перелить в стакан.</item>
         <item>Выжать сок из всех ингредиентов, в том порядке, в котором написано. Перелить в стакан.</item>
         <item>Выжать сок из всех ингредиентов, в том порядке, в котором написано. Перелить в стакан.</item>
         <item>Выжать сок из грейпфрута, добавить сироп, перемешать. Перелить в бокал.</item>

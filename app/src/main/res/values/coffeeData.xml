@@ -2,18 +2,18 @@
 <resources>
 
     <array name="coffeeImages">
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
     </array>
     
     <string-array name="coffeeNames">

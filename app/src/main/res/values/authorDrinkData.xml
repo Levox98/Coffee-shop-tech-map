@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="adImages">
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
+        <item>@drawable/ic_coffee_general</item>
     </array>
 
     <string-array name="adNames">
@@ -67,7 +67,7 @@
         <item>Сливки, молоко, кофе, сироп и пасту смешать в питчере. Вспенить капучинатором,
             перелить в блендер(для лучшего растворения пасты). Взбивать 10 секунд. Перелить в стакан.</item>
         <item>На дно бокала налить шоколадный топпинг. Взбить молоко и аккуратно влить в бокал.
-            Приготовить ДОПИО, смешать с имбирём. Влить кофе в молоко и украсить шоколадом.</item>
+            Приготовить ДОПИО, смешать с имбирём. Влить кофе в молоко и украсить шоколадом. (КАК РАФ)</item>
         <item>Пролить ДОПИО в питчер, затем в этот же питчер влить остальные ингредиенты. Вспенить
             всё содержимое вместе и перелить в тару.</item>
         <item>Пролить ТРИПЛО в питчер, затем в этот же питчер влить остальные ингредиенты. Вспенить
@@ -87,9 +87,9 @@
             испачкаться. До полного растворения (?) мин 30 сек. Вспенить молоко как для капучино,
             перелить в стакан готовую матчу, добавить молоко.</item>
         <item>Сварить ДОПИО. В молоко добавить ганаш - вспенить. На низ стакана вылить кофе,
-            сахарный сироп, влить молоко.</item>
+            сахарный сироп, влить молоко. (КАК АРАХИСЛВЫЙ РАФ)</item>
         <item>Сварить ТРИПЛО. В молоко добавить ганаш - вспенить. На низ стакана вылить кофе,
-            сахарный сироп, влить молоко.</item>
+            сахарный сироп, влить молоко. (КАК АРАХИСЛВЫЙ РАФ)</item>
         <item>Разогреть в питчере кофе. Молоко и сироп перелить в бокал. Украсить сливками, тёртым
             шоколадом и тёртым орехом.</item>
         <item>Насыпать специи в тару, налить сироп на специи, налить кипяток в тару. Только после

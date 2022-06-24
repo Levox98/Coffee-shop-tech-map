@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="smoothieImages">
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
+        <item>@drawable/ic_smoothie_general</item>
+        <item>@drawable/ic_smoothie_general</item>
+        <item>@drawable/ic_smoothie_general</item>
+        <item>@drawable/ic_smoothie_general</item>
+        <item>@drawable/ic_smoothie_general</item>
+        <item>@drawable/ic_smoothie_general</item>
+        <item>@drawable/ic_smoothie_general</item>
+        <item>@drawable/ic_smoothie_general</item>
+        <item>@drawable/ic_smoothie_general</item>
+        <item>@drawable/ic_smoothie_general</item>
     </array>
 
     <string-array name="smoothieNames">

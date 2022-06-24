@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="milkshakeImages">
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
-        <item>@drawable/ic_cold_drink</item>
+        <item>@drawable/ic_milkshake_general</item>
+        <item>@drawable/ic_milkshake_general</item>
+        <item>@drawable/ic_milkshake_general</item>
+        <item>@drawable/ic_milkshake_general</item>
+        <item>@drawable/ic_milkshake_general</item>
+        <item>@drawable/ic_milkshake_general</item>
+        <item>@drawable/ic_milkshake_general</item>
+        <item>@drawable/ic_milkshake_general</item>
+        <item>@drawable/ic_milkshake_general</item>
+        <item>@drawable/ic_milkshake_general</item>
+        <item>@drawable/ic_milkshake_general</item>
+        <item>@drawable/ic_milkshake_general</item>
     </array>
 
     <string-array name="milkshakeNames">

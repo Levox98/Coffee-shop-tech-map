@@ -5,31 +5,44 @@
     <group android:checkableBehavior="single">
         <item android:title="@string/ctg_name_coffee"
             android:id="@+id/id_category_coffee"
-            android:icon="@drawable/ic_coffee"/>
+            android:icon="@drawable/ic_coffee_general"/>
         <item android:title="@string/ctg_name_tea"
             android:id="@+id/id_category_tea"
-            android:icon="@drawable/ic_coffee"/>
+            android:icon="@drawable/ic_tea_general"/>
         <item android:title="@string/ctg_name_cocoa"
             android:id="@+id/id_category_cocoa"
-            android:icon="@drawable/ic_coffee"/>
+            android:icon="@drawable/ic_cocoa_general"/>
         <item android:title="@string/ctg_name_cold_drink"
             android:id="@+id/id_category_cold_drink"
             android:icon="@drawable/ic_cold_drink"/>
         <item android:title="@string/ctg_name_smoothie"
             android:id="@+id/id_category_smoothie"
-            android:icon="@drawable/ic_cold_drink"/>
+            android:icon="@drawable/ic_smoothie_general"/>
         <item android:title="@string/ctg_name_fresh"
             android:id="@+id/id_category_fresh"
-            android:icon="@drawable/ic_cold_drink"/>
+            android:icon="@drawable/ic_fresh_general"/>
         <item android:title="@string/ctg_name_milkshake"
             android:id="@+id/id_category_milkshake"
-            android:icon="@drawable/ic_cold_drink"/>
+            android:icon="@drawable/ic_milkshake_general"/>
         <item android:title="@string/ctg_name_mulled_wine"
             android:id="@+id/id_category_mulled_wine"
-            android:icon="@drawable/ic_cold_drink"/>
+            android:icon="@drawable/ic_mulled_wine_general"/>
         <item android:title="@string/ctg_name_author_drink"
             android:id="@+id/id_category_author_drink"
-            android:icon="@drawable/ic_cold_drink"/>
+            android:icon="@drawable/ic_coffee_general"/>
     </group>
+
+    <item android:title="@string/menu_season_drinks">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item android:title="@string/ctg_summer_drinks"
+                    android:id="@+id/id_category_season_summer"
+                    android:icon="@drawable/ic_coffee"/>
+                <item android:title="@string/ctg_winter_drinks"
+                    android:id="@+id/id_category_season_winter"
+                    android:icon="@drawable/ic_winter_drinks"/>
+            </group>
+        </menu>
+    </item>
 
 </menu>

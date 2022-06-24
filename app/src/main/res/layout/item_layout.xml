@@ -13,22 +13,26 @@
         android:layout_width="@dimen/item_image_width"
         android:layout_height="@dimen/item_image_height"
         android:layout_marginTop="32dp"
+        android:src="@drawable/ic_coffee_general"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_coffee" />
+        app:srcCompat="@drawable/ic_coffee"
+        tools:src="@drawable/ic_coffee_general" />
 
     <TextView
         android:id="@+id/id_content_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
         android:alpha="1"
         android:text="TextView"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="34sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/id_content_main_image"
         app:layout_constraintStart_toStartOf="@+id/id_content_main_image"
         app:layout_constraintTop_toBottomOf="@+id/id_content_main_image" />

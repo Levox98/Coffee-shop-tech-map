@@ -27,7 +27,6 @@ class ContentAdapter(itemArray: ArrayList<ListItem>, context: Context) : Recycle
             tvTitle.text = listItem.titleText
 
             itemView.setOnClickListener() {
-                Toast.makeText(context, "Pressed: ${tvTitle.text}", Toast.LENGTH_SHORT).show()
 
                 val intent = Intent(context, ContentActivity::class.java).apply {
                     putExtra("image", listItem.imageId)

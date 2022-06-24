@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="cocoaImages">
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
+        <item>@drawable/ic_cocoa_general</item>
+        <item>@drawable/ic_cocoa_general</item>
+        <item>@drawable/ic_cocoa_general</item>
+        <item>@drawable/ic_cocoa_general</item>
     </array>
 
     <string-array name="cocoaNames">

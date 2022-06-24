@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="glyntweinImages">
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
-        <item>@drawable/ic_coffee</item>
+        <item>@drawable/ic_mulled_wine_general</item>
+        <item>@drawable/ic_mulled_wine_general</item>
+        <item>@drawable/ic_mulled_wine_general</item>
     </array>
 
     <string-array name="glyntweinNames">
