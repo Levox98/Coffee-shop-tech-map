@@ -12,4 +12,8 @@
     <string name="menu_season_drinks">Сезонное меню</string>
     <string name="ctg_summer_drinks">Весна/лето</string>
     <string name="ctg_winter_drinks">Осень/зима</string>
+
+    ИНГРЕДИЕНТЫ
+
+    <string name="milk">Молоко</string>
 </resources>

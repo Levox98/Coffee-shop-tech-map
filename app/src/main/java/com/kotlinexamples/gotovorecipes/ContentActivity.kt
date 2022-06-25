@@ -1,13 +1,23 @@
 package com.kotlinexamples.gotovorecipes
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.drawerlayout.widget.DrawerLayout
+import androidx.recyclerview.widget.RecyclerView
+import com.kotlinexamples.gotovorecipes.adapters.ContentAdapter
 import com.kotlinexamples.gotovorecipes.databinding.ContentLayoutBinding
-import com.kotlinexamples.gotovorecipes.databinding.FullContentLayoutBinding
 
 class ContentActivity : AppCompatActivity() {
 
     lateinit var binding: ContentLayoutBinding
+
+    private var adapter: ContentAdapter? = null
+    private var recyclerView: RecyclerView? = null
+    private var drawerLayout: DrawerLayout? = null
+
+    private var context: Context? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

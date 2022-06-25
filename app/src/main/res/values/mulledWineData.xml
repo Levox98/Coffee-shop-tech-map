@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <array name="glyntweinImages">
+    <array name="mulledWineImages">
         <item>@drawable/ic_mulled_wine_general</item>
         <item>@drawable/ic_mulled_wine_general</item>
         <item>@drawable/ic_mulled_wine_general</item>
     </array>
 
-    <string-array name="glyntweinNames">
+    <string-array name="mulledWineNames">
         <item>Глинтвейн б/а 250мл</item>
         <item>Глинтвейн б/а 500мл</item>
         <item>Как делать сахарный сироп</item>
     </string-array>
 
-    <string-array name="glyntweinIngredients">
+    <string-array name="mulledWineIngredients">
         <item>Сахарный сироп 10г, корица молотая 0.6г, гвоздика 1г, чёрный перец(горошек) 0.6г,
             апельсин 20г, яблоко 10г, сок гранатовый 200г</item>
         <item>Сахарный сироп 10г, корица молотая 1.6г, гвоздика 1.2г, чёрный перец(горошек) 1.2г,
@@ -20,7 +20,7 @@
         <item>Сахарный песок 300г, кипяток 80г</item>
     </string-array>
 
-    <string-array name="glyntweinRecipes">
+    <string-array name="mulledWineRecipes">
         <item>Нарезать яблоко, апельсин дольками. Поместить в питчер, добавить специи, сок,
             сахарный сироп. Вскипятить на форсунке, перелить в стакан для подачи.</item>
         <item>Нарезать яблоко, апельсин дольками. Поместить в питчер, добавить специи, сок,
