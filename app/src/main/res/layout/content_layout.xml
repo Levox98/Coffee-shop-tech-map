@@ -8,7 +8,7 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-    <include layout="@layout/full_content_layout"
+    <include layout="@layout/full_item_layout"
         android:id="@+id/id_full_content"
         android:layout_height="match_parent"
         android:layout_width="match_parent"/>

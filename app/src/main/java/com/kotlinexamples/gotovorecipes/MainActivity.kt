@@ -29,6 +29,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         if (savedInstanceState == null) {
             onLaunch()
+        } else {
+            onRelaunch(intent.getIntExtra("ImagesArray", R.drawable.ic_coffee),
+                intent.getIntExtra("NamesArray", 0),
+                intent.getIntExtra("IngredientsArray", 0),
+                intent.getIntExtra("RecipesArray", 0))
         }
     }
 
@@ -67,6 +72,31 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             resources.getStringArray(R.array.coffeeNames),
             resources.getStringArray(R.array.coffeeIngredients),
             resources.getStringArray(R.array.coffeeRecipes)))
+
+        adapter = ContentAdapter(list, this)
+
+        recyclerView?.adapter = adapter
+    }
+
+    private fun onRelaunch(imagesArray: Int, namesArray: Int, ingredientsArray: Int,
+                           recipesArray: Int) {
+
+        binding.idNavigationView.setNavigationItemSelectedListener(this)
+
+        drawerLayout = binding.drawerLayout
+        drawerLayout?.openDrawer(GravityCompat.START)
+
+        recyclerView = binding.idLayoutMain.idConstraintLayoutMain
+            .findViewById(R.id.id_recycler_view_main)
+
+        recyclerView?.hasFixedSize()
+        recyclerView?.layoutManager = LinearLayoutManager(this)
+        val list = ArrayList<ListItem>()
+
+        list.addAll(fillInfo(getImageId(resources, imagesArray),
+            resources.getStringArray(namesArray),
+            resources.getStringArray(ingredientsArray),
+            resources.getStringArray(recipesArray)))
 
         adapter = ContentAdapter(list, this)
 
