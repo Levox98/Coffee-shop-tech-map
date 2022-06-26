@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.RecyclerView
@@ -37,22 +36,22 @@ class ContentActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.id_category_coffee -> testingStuff(R.string.coffee_chosen.toString())
-            R.id.id_category_tea -> testingStuff(R.string.tea_chosen.toString())
-            R.id.id_category_cocoa -> testingStuff(R.string.cocoa_chosen.toString())
-            R.id.id_category_cold_drink -> testingStuff(R.string.cold_drink_chosen.toString())
-            R.id.id_category_smoothie -> testingStuff(R.string.smoothie_chosen.toString())
-            R.id.id_category_fresh -> testingStuff(R.string.fresh_chosen.toString())
-            R.id.id_category_milkshake -> testingStuff(R.string.milkshake_chosen.toString())
-            R.id.id_category_mulled_wine -> testingStuff(R.string.mulled_wine_chosen.toString())
-            R.id.id_category_author_drink -> testingStuff(R.string.author_drink_chosen.toString())
-            R.id.id_category_season_summer -> testingStuff(R.string.summer_drink_chosen.toString())
-            R.id.id_category_season_winter -> testingStuff(R.string.winter_drink_chosen.toString())
+            R.id.id_category_coffee -> goToItemList(R.string.coffee_chosen.toString())
+            R.id.id_category_tea -> goToItemList(R.string.tea_chosen.toString())
+            R.id.id_category_cocoa -> goToItemList(R.string.cocoa_chosen.toString())
+            R.id.id_category_cold_drink -> goToItemList(R.string.cold_drink_chosen.toString())
+            R.id.id_category_smoothie -> goToItemList(R.string.smoothie_chosen.toString())
+            R.id.id_category_fresh -> goToItemList(R.string.fresh_chosen.toString())
+            R.id.id_category_milkshake -> goToItemList(R.string.milkshake_chosen.toString())
+            R.id.id_category_mulled_wine -> goToItemList(R.string.mulled_wine_chosen.toString())
+            R.id.id_category_author_drink -> goToItemList(R.string.author_drink_chosen.toString())
+            R.id.id_category_season_summer -> goToItemList(R.string.summer_drink_chosen.toString())
+            R.id.id_category_season_winter -> goToItemList(R.string.winter_drink_chosen.toString())
         }
         return true
     }
 
-    private fun testingStuff(string: String) {
+    private fun goToItemList(string: String) {
         val i = Intent(this, MainActivity::class.java).apply {
             putExtra(getString(R.string.which_drink), string)
             addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)

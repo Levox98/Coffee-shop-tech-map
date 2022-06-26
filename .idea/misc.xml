@@ -13,10 +13,12 @@
         <entry key="app/src/main/res/layout/content_layout.xml" value="0.19628286491387126" />
         <entry key="app/src/main/res/layout/full-content_layout.xml" value="0.19628286491387126" />
         <entry key="app/src/main/res/layout/full_content_layout.xml" value="0.19628286491387126" />
+        <entry key="app/src/main/res/layout/full_item_layout.xml" value="0.19628286491387126" />
         <entry key="app/src/main/res/layout/header_main_menu.xml" value="0.24184329267861188" />
         <entry key="app/src/main/res/layout/item_layout.xml" value="0.19533691406250006" />
-        <entry key="app/src/main/res/layout/main_content.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/main_content.xml" value="0.20931854248046877" />
         <entry key="app/src/main/res/menu/drawer_main_menu.xml" value="0.21923076923076923" />
+        <entry key="app/src/main/res/menu/small_menu.xml" value="0.21846943138093203" />
       </map>
     </option>
   </component>
