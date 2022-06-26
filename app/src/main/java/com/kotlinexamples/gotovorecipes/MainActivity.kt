@@ -1,9 +1,12 @@
 package com.kotlinexamples.gotovorecipes
 
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
+import android.content.res.Resources
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -22,19 +25,55 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private var recyclerView: RecyclerView? = null
     private var drawerLayout: DrawerLayout? = null
 
+    private var backPressed: Long = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        if (savedInstanceState == null) {
+        if (!isStartedFromIntent()) {
             onLaunch()
         } else {
-            onRelaunch(intent.getIntExtra("ImagesArray", R.drawable.ic_coffee),
-                intent.getIntExtra("NamesArray", 0),
-                intent.getIntExtra("IngredientsArray", 0),
-                intent.getIntExtra("RecipesArray", 0))
+            when (intent.getStringExtra(getString(R.string.which_drink))) {
+                R.string.coffee_chosen.toString() -> onRelaunch(resources, R.array.coffeeImages,
+                    R.array.coffeeNames, R.array.coffeeIngredients, R.array.coffeeRecipes)
+                R.string.tea_chosen.toString() -> onRelaunch(resources, R.array.teaImages,
+                    R.array.teaNames, R.array.teaIngredients, R.array.teaRecipes)
+                R.string.cocoa_chosen.toString()-> onRelaunch(resources, R.array.cocoaImages,
+                    R.array.cocoaNames, R.array.cocoaIngredients, R.array.cocoaRecipes)
+                R.string.cold_drink_chosen.toString() -> onRelaunch(resources, R.array.cdImages,
+                    R.array.cdNames, R.array.cdIngredients, R.array.cdIngredients)
+                R.string.smoothie_chosen.toString() -> onRelaunch(resources, R.array.smoothieImages,
+                    R.array.smoothieNames, R.array.smoothieIngredients, R.array.smoothieRecipes)
+                R.string.fresh_chosen.toString() -> onRelaunch(resources, R.array.freshImages,
+                    R.array.freshNames, R.array.freshIngredients, R.array.freshRecipes)
+                R.string.milkshake_chosen.toString() -> onRelaunch(resources, R.array.milkshakeImages,
+                    R.array.milkshakeNames, R.array.milkshakeIngredients, R.array.milkshakeRecipes)
+                R.string.mulled_wine_chosen.toString() -> onRelaunch(resources, R.array.mulledWineImages,
+                    R.array.mulledWineNames, R.array.mulledWineIngredients, R.array.mulledWineRecipes)
+                R.string.author_drink_chosen.toString() -> onRelaunch(resources, R.array.adImages,
+                    R.array.adNames, R.array.adIngredients, R.array.adIngredients)
+                R.string.summer_drink_chosen.toString() -> onRelaunch(resources, R.array.sdImages,
+                    R.array.sdNames, R.array.sdIngredients, R.array.sdRecipes)
+                R.string.winter_drink_chosen.toString() -> onRelaunch(resources, R.array.wdImages,
+                    R.array.wdNames, R.array.wdIngredients, R.array.wdRecipes)
+            }
         }
+
+    }
+
+    override fun onBackPressed() {
+        if (backPressed + 1000 > System.currentTimeMillis()) {
+            super.onBackPressed()
+        } else {
+            Toast.makeText(
+                baseContext,
+                "Press once again to exit!", Toast.LENGTH_SHORT
+            )
+                .show()
+        }
+        backPressed = System.currentTimeMillis()
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -78,13 +117,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         recyclerView?.adapter = adapter
     }
 
-    private fun onRelaunch(imagesArray: Int, namesArray: Int, ingredientsArray: Int,
-                           recipesArray: Int) {
+    private fun onRelaunch(resources: Resources, imagesArray: Int, namesArray: Int,
+                           ingredientsArray: Int, recipesArray: Int) {
 
         binding.idNavigationView.setNavigationItemSelectedListener(this)
 
         drawerLayout = binding.drawerLayout
-        drawerLayout?.openDrawer(GravityCompat.START)
 
         recyclerView = binding.idLayoutMain.idConstraintLayoutMain
             .findViewById(R.id.id_recycler_view_main)
@@ -101,5 +139,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         adapter = ContentAdapter(list, this)
 
         recyclerView?.adapter = adapter
+    }
+
+    private fun isStartedFromIntent(): Boolean {
+        val i: Intent = intent
+
+        return i.getIntExtra(getString(R.string.starting_from_intent), 0) != 0
     }
 }

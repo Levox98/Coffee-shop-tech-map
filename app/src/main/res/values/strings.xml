@@ -13,7 +13,18 @@
     <string name="ctg_summer_drinks">Весна/лето</string>
     <string name="ctg_winter_drinks">Осень/зима</string>
 
-    ИНГРЕДИЕНТЫ
+    <string name="starting_from_intent">STARTING_FROM_INTENT</string>
 
-    <string name="milk">Молоко</string>
+    <string name="which_drink">WHICH_DRINK</string>
+    <string name="coffee_chosen">COFFEE_CHOSEN</string>
+    <string name="tea_chosen">TEA_CHOSEN</string>
+    <string name="cocoa_chosen">COCOA_CHOSEN</string>
+    <string name="cold_drink_chosen">COLD_DRINK_CHOSEN</string>
+    <string name="smoothie_chosen">SMOOTHIE_CHOSEN</string>
+    <string name="fresh_chosen">FRESH_CHOSEN</string>
+    <string name="milkshake_chosen">MILKSHAKE_CHOSEN</string>
+    <string name="mulled_wine_chosen">MULLED_WINE_CHOSEN</string>
+    <string name="author_drink_chosen">AUTHOR_DRINK_CHOSEN</string>
+    <string name="summer_drink_chosen">SUMMER_DRINK_CHOSEN</string>
+    <string name="winter_drink_chosen">WINTER_DRINK_CHOSEN</string>
 </resources>

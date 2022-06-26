@@ -37,19 +37,29 @@ class ContentActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.id_category_coffee -> {
-                Toast.makeText(this, "!!!!!!!!", Toast.LENGTH_SHORT).show()
-
-                val i = Intent(this, MainActivity::class.java).apply {
-                    putExtra("ImageArray", R.array.coffeeImages)
-                    putExtra("NameArray", R.array.coffeeNames)
-                    putExtra("IngredientsArray", R.array.coffeeIngredients)
-                    putExtra("RecipesArray", R.array.coffeeRecipes)
-                }
-                startActivity(i)
-            }
-            else -> Toast.makeText(this, "!!!!", Toast.LENGTH_SHORT).show()
+            R.id.id_category_coffee -> testingStuff(R.string.coffee_chosen.toString())
+            R.id.id_category_tea -> testingStuff(R.string.tea_chosen.toString())
+            R.id.id_category_cocoa -> testingStuff(R.string.cocoa_chosen.toString())
+            R.id.id_category_cold_drink -> testingStuff(R.string.cold_drink_chosen.toString())
+            R.id.id_category_smoothie -> testingStuff(R.string.smoothie_chosen.toString())
+            R.id.id_category_fresh -> testingStuff(R.string.fresh_chosen.toString())
+            R.id.id_category_milkshake -> testingStuff(R.string.milkshake_chosen.toString())
+            R.id.id_category_mulled_wine -> testingStuff(R.string.mulled_wine_chosen.toString())
+            R.id.id_category_author_drink -> testingStuff(R.string.author_drink_chosen.toString())
+            R.id.id_category_season_summer -> testingStuff(R.string.summer_drink_chosen.toString())
+            R.id.id_category_season_winter -> testingStuff(R.string.winter_drink_chosen.toString())
         }
         return true
+    }
+
+    private fun testingStuff(string: String) {
+        val i = Intent(this, MainActivity::class.java).apply {
+            putExtra(getString(R.string.which_drink), string)
+            addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+            addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            putExtra(getString(R.string.starting_from_intent), 1)
+        }
+        startActivity(i)
+        finish()
     }
 }
