@@ -67,11 +67,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         if (backPressed + 1000 > System.currentTimeMillis()) {
             super.onBackPressed()
         } else {
-            Toast.makeText(
-                baseContext,
-                "Press once again to exit!", Toast.LENGTH_SHORT
-            )
-                .show()
+            Toast.makeText(baseContext, "Press once again to exit!", Toast.LENGTH_SHORT).show()
         }
         backPressed = System.currentTimeMillis()
     }
