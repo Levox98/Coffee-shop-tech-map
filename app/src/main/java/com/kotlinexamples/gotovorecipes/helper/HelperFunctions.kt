@@ -86,6 +86,7 @@ fun onMenuItemActivated(resources: Resources, adapter: ContentAdapter?,
             resources.getStringArray(recipesArray)
         )
     )
+
     recyclerView?.layoutManager?.scrollToPosition(0)
     drawerLayout?.closeDrawer(GravityCompat.START, true)
 }

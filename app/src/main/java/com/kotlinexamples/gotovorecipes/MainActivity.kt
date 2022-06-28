@@ -5,7 +5,6 @@ import android.content.Intent
 import android.content.res.Resources
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -39,50 +38,70 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             when (intent.getStringExtra(getString(R.string.which_drink))) {
                 R.string.coffee_chosen.toString() -> onRelaunch(resources, R.array.coffeeImages,
                     R.array.coffeeNames, R.array.coffeeIngredients, R.array.coffeeRecipes)
+
                 R.string.tea_chosen.toString() -> onRelaunch(resources, R.array.teaImages,
                     R.array.teaNames, R.array.teaIngredients, R.array.teaRecipes)
+
                 R.string.cocoa_chosen.toString()-> onRelaunch(resources, R.array.cocoaImages,
                     R.array.cocoaNames, R.array.cocoaIngredients, R.array.cocoaRecipes)
+
                 R.string.cold_drink_chosen.toString() -> onRelaunch(resources, R.array.cdImages,
                     R.array.cdNames, R.array.cdIngredients, R.array.cdIngredients)
+
                 R.string.smoothie_chosen.toString() -> onRelaunch(resources, R.array.smoothieImages,
                     R.array.smoothieNames, R.array.smoothieIngredients, R.array.smoothieRecipes)
+
                 R.string.fresh_chosen.toString() -> onRelaunch(resources, R.array.freshImages,
                     R.array.freshNames, R.array.freshIngredients, R.array.freshRecipes)
+
                 R.string.milkshake_chosen.toString() -> onRelaunch(resources, R.array.milkshakeImages,
                     R.array.milkshakeNames, R.array.milkshakeIngredients, R.array.milkshakeRecipes)
+
                 R.string.mulled_wine_chosen.toString() -> onRelaunch(resources, R.array.mulledWineImages,
                     R.array.mulledWineNames, R.array.mulledWineIngredients, R.array.mulledWineRecipes)
+
                 R.string.author_drink_chosen.toString() -> onRelaunch(resources, R.array.adImages,
                     R.array.adNames, R.array.adIngredients, R.array.adIngredients)
+
                 R.string.summer_drink_chosen.toString() -> onRelaunch(resources, R.array.sdImages,
                     R.array.sdNames, R.array.sdIngredients, R.array.sdRecipes)
+
                 R.string.winter_drink_chosen.toString() -> onRelaunch(resources, R.array.wdImages,
                     R.array.wdNames, R.array.wdIngredients, R.array.wdRecipes)
             }
         }
 
-        binding.idLayoutMain.btnCoffee.setOnClickListener { onRelaunch(resources, R.array.coffeeImages,
+        binding.layoutMain.btnCoffee.setOnClickListener { onRelaunch(resources, R.array.coffeeImages,
             R.array.coffeeNames, R.array.coffeeIngredients, R.array.coffeeRecipes) }
-        binding.idLayoutMain.btnTea.setOnClickListener { onRelaunch(resources, R.array.teaImages,
+
+        binding.layoutMain.btnTea.setOnClickListener { onRelaunch(resources, R.array.teaImages,
             R.array.teaNames, R.array.teaIngredients, R.array.teaRecipes) }
-        binding.idLayoutMain.btnCocoa.setOnClickListener { onRelaunch(resources, R.array.cocoaImages,
+
+        binding.layoutMain.btnCocoa.setOnClickListener { onRelaunch(resources, R.array.cocoaImages,
             R.array.cocoaNames, R.array.cocoaIngredients, R.array.cocoaRecipes) }
-        binding.idLayoutMain.btnColdDrinks.setOnClickListener { onRelaunch(resources, R.array.cdImages,
+
+        binding.layoutMain.btnColdDrinks.setOnClickListener { onRelaunch(resources, R.array.cdImages,
             R.array.cdNames, R.array.cdIngredients, R.array.cdRecipes) }
-        binding.idLayoutMain.btnSmoothie.setOnClickListener { onRelaunch(resources, R.array.smoothieImages,
+
+        binding.layoutMain.btnSmoothie.setOnClickListener { onRelaunch(resources, R.array.smoothieImages,
             R.array.smoothieNames, R.array.smoothieIngredients, R.array.smoothieRecipes) }
-        binding.idLayoutMain.btnFresh.setOnClickListener { onRelaunch(resources, R.array.freshImages,
+
+        binding.layoutMain.btnFresh.setOnClickListener { onRelaunch(resources, R.array.freshImages,
             R.array.freshNames, R.array.freshIngredients, R.array.freshRecipes) }
-        binding.idLayoutMain.btnMilkshake.setOnClickListener { onRelaunch(resources, R.array.milkshakeImages,
+
+        binding.layoutMain.btnMilkshake.setOnClickListener { onRelaunch(resources, R.array.milkshakeImages,
             R.array.milkshakeNames, R.array.milkshakeIngredients, R.array.milkshakeRecipes) }
-        binding.idLayoutMain.btnMulledWine.setOnClickListener { onRelaunch(resources, R.array.mulledWineImages,
+
+        binding.layoutMain.btnMulledWine.setOnClickListener { onRelaunch(resources, R.array.mulledWineImages,
                 R.array.mulledWineNames, R.array.mulledWineIngredients, R.array.mulledWineRecipes) }
-        binding.idLayoutMain.btnAuthorDrinks.setOnClickListener { onRelaunch(resources, R.array.adImages,
+
+        binding.layoutMain.btnAuthorDrinks.setOnClickListener { onRelaunch(resources, R.array.adImages,
             R.array.adNames, R.array.adIngredients, R.array.adRecipes) }
-        binding.idLayoutMain.btnSummerDrinks.setOnClickListener { onRelaunch(resources, R.array.sdImages,
+
+        binding.layoutMain.btnSummerDrinks.setOnClickListener { onRelaunch(resources, R.array.sdImages,
             R.array.sdNames, R.array.sdIngredients, R.array.sdRecipes) }
-        binding.idLayoutMain.btnWinterDrinks.setOnClickListener { onRelaunch(resources, R.array.wdImages,
+
+        binding.layoutMain.btnWinterDrinks.setOnClickListener { onRelaunch(resources, R.array.wdImages,
             R.array.wdNames, R.array.wdIngredients, R.array.wdRecipes) }
     }
 
@@ -98,17 +117,17 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.id_category_coffee -> onCoffeeSelected(resources, adapter, recyclerView, drawerLayout)
-            R.id.id_category_tea -> onTeaSelected(resources, adapter, recyclerView, drawerLayout)
-            R.id.id_category_cocoa -> onCocoaSelected(resources, adapter, recyclerView, drawerLayout)
-            R.id.id_category_cold_drink -> onColdDrinkSelected(resources, adapter, recyclerView, drawerLayout)
-            R.id.id_category_smoothie -> onSmoothieSelected(resources, adapter, recyclerView, drawerLayout)
-            R.id.id_category_fresh -> onFreshSelected(resources, adapter, recyclerView, drawerLayout)
-            R.id.id_category_milkshake -> onMilkshakeSelected(resources, adapter, recyclerView, drawerLayout)
-            R.id.id_category_mulled_wine -> onMulledWineSelected(resources, adapter, recyclerView, drawerLayout)
-            R.id.id_category_author_drink -> onAuthorDrinksSelected(resources, adapter, recyclerView, drawerLayout)
-            R.id.id_category_season_summer -> onSummerDrinksSelected(resources, adapter, recyclerView, drawerLayout)
-            R.id.id_category_season_winter -> onWinterDrinksSelected(resources, adapter, recyclerView, drawerLayout)
+            R.id.category_coffee -> onCoffeeSelected(resources, adapter, recyclerView, drawerLayout)
+            R.id.category_tea -> onTeaSelected(resources, adapter, recyclerView, drawerLayout)
+            R.id.category_cocoa -> onCocoaSelected(resources, adapter, recyclerView, drawerLayout)
+            R.id.category_cold_drink -> onColdDrinkSelected(resources, adapter, recyclerView, drawerLayout)
+            R.id.category_smoothie -> onSmoothieSelected(resources, adapter, recyclerView, drawerLayout)
+            R.id.category_fresh -> onFreshSelected(resources, adapter, recyclerView, drawerLayout)
+            R.id.category_milkshake -> onMilkshakeSelected(resources, adapter, recyclerView, drawerLayout)
+            R.id.category_mulled_wine -> onMulledWineSelected(resources, adapter, recyclerView, drawerLayout)
+            R.id.category_author_drink -> onAuthorDrinksSelected(resources, adapter, recyclerView, drawerLayout)
+            R.id.category_season_summer -> onSummerDrinksSelected(resources, adapter, recyclerView, drawerLayout)
+            R.id.category_season_winter -> onWinterDrinksSelected(resources, adapter, recyclerView, drawerLayout)
         }
         return true
     }
@@ -120,7 +139,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawerLayout = binding.drawerLayout
         drawerLayout?.openDrawer(GravityCompat.START)
 
-        recyclerView = binding.idLayoutMain.idConstraintLayoutMain
+        recyclerView = binding.layoutMain.constraintLayoutMain
             .findViewById(R.id.id_recycler_view_main)
 
         recyclerView?.hasFixedSize()
@@ -144,7 +163,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         drawerLayout = binding.drawerLayout
 
-        recyclerView = binding.idLayoutMain.idConstraintLayoutMain
+        recyclerView = binding.layoutMain.constraintLayoutMain
             .findViewById(R.id.id_recycler_view_main)
 
         recyclerView?.hasFixedSize()
