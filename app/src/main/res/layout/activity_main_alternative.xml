@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_constraint_layout_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start">
+
+    <LinearLayout
+        android:id="@+id/ll_left"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ScrollView
+            android:id="@+id/sv_left"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="43"
+            android:contentDescription="left_menu">
+
+            <LinearLayout
+                android:id="@+id/ll_left_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_coffee"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/black"
+                    android:contentDescription="btn_coffee"
+                    android:textSize="8sp"
+                    app:icon="@drawable/ic_coffee_general"
+                    app:iconPadding="0dp"
+                    app:iconSize="@dimen/button_icon_size"
+                    app:iconTint="@color/ic_coffee_background"
+                    app:iconTintMode="src_atop" />
+
+                <Button
+                    android:id="@+id/btn_tea"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/black"
+                    android:contentDescription="btn_tea"
+                    android:text="Чай"
+                    android:textSize="8sp"
+                    app:icon="@drawable/ic_tea_general"
+                    app:iconSize="@dimen/button_icon_size"
+                    app:iconTint="@color/ic_coffee_background" />
+
+                <Button
+                    android:id="@+id/btn_cocoa"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/black"
+                    android:contentDescription="btn_cocoa"
+                    android:text="Какао"
+                    android:textSize="8sp"
+                    app:icon="@drawable/ic_cocoa_general"
+                    app:iconSize="@dimen/button_icon_size"
+                    app:iconTint="@color/ic_coffee_background" />
+
+                <Button
+                    android:id="@+id/btn_cold_drinks"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/black"
+                    android:contentDescription="btn_cold_drinks"
+                    android:text="Хол. напитки"
+                    android:textSize="8sp"
+                    app:icon="@drawable/ic_cold_drink_general"
+                    app:iconSize="@dimen/button_icon_size"
+                    app:iconTint="@color/ic_coffee_background" />
+
+                <Button
+                    android:id="@+id/btn_smoothie"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/black"
+                    android:contentDescription="btn_smoothie"
+                    android:text="Смузи"
+                    android:textSize="8sp"
+                    app:icon="@drawable/ic_smoothie_general"
+                    app:iconSize="@dimen/button_icon_size"
+                    app:iconTint="@color/ic_coffee_background" />
+
+                <Button
+                    android:id="@+id/btn_fresh"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/black"
+                    android:contentDescription="btn_fresh"
+                    android:text="Фреши"
+                    android:textSize="8sp"
+                    app:icon="@drawable/ic_fresh_general"
+                    app:iconSize="@dimen/button_icon_size"
+                    app:iconTint="@color/ic_coffee_background" />
+
+                <Button
+                    android:id="@+id/btn_milkshake"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/black"
+                    android:contentDescription="btn_milkshake"
+                    android:text="Милкшейки"
+                    android:textSize="8sp"
+                    app:icon="@drawable/ic_milkshake_general"
+                    app:iconSize="@dimen/button_icon_size"
+                    app:iconTint="@color/ic_coffee_background" />
+
+                <Button
+                    android:id="@+id/btn_mulled_wine"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/black"
+                    android:contentDescription="btn_mulled_wine"
+                    android:text="Глинтвейн"
+                    android:textSize="8sp"
+                    app:icon="@drawable/ic_mulled_wine_general"
+                    app:iconSize="@dimen/button_icon_size"
+                    app:iconTint="@color/ic_coffee_background" />
+
+                <Button
+                    android:id="@+id/btn_author_drinks"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/black"
+                    android:contentDescription="btn_author_drinks"
+                    android:text="Авторские"
+                    android:textSize="8sp"
+                    app:icon="@drawable/ic_coffee_general"
+                    app:iconSize="@dimen/button_icon_size"
+                    app:iconTint="@color/ic_coffee_background" />
+
+                <Button
+                    android:id="@+id/btn_summer_drinks"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/black"
+                    android:contentDescription="btn_summer_drinks"
+                    android:text="Летние"
+                    android:textSize="8sp"
+                    app:icon="@drawable/ic_summer_drinks_alternative"
+                    app:iconSize="@dimen/button_icon_size"
+                    app:iconTint="@color/ic_coffee_background" />
+
+                <Button
+                    android:id="@+id/btn_winter_drinks"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/black"
+                    android:contentDescription="btn_drinks"
+                    android:text="Зимние"
+                    android:textSize="8sp"
+                    app:icon="@drawable/ic_winter_drinks"
+                    app:iconSize="@dimen/button_icon_size"
+                    app:iconTint="@color/ic_coffee_background" />
+
+            </LinearLayout>
+        </ScrollView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/id_recycler_view_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="7" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

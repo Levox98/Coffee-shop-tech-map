@@ -1,5 +1,6 @@
 package com.kotlinexamples.gotovorecipes.adapters
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -7,32 +8,31 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.kotlinexamples.gotovorecipes.ContentActivity
 import com.kotlinexamples.gotovorecipes.R
-import com.kotlinexamples.gotovorecipes.data.ListItem
+import com.kotlinexamples.gotovorecipes.data.Item
 
-class ContentAdapter(itemArray: ArrayList<ListItem>, context: Context) : RecyclerView.Adapter<ContentAdapter.ViewHolder>() {
-    var itemArrayR = itemArray
-    var contextR = context
+class ContentAdapter(itemArray: ArrayList<Item>, context: Context) : RecyclerView.Adapter<ContentAdapter.ViewHolder>() {
+    private var itemArrayR = itemArray
+    private var contextR = context
 
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val image = view.findViewById<ImageView>(R.id.id_content_main_image)
-        val tvTitle = view.findViewById<TextView>(R.id.id_content_name)
+        private val image= view.findViewById<ImageView>(R.id.id_content_main_image)
+        private val tvTitle = view.findViewById<TextView>(R.id.id_content_name)
 
-        fun bind(listItem: ListItem, context: Context) {
-            image.setImageResource(listItem.imageId)
-            tvTitle.text = listItem.titleText
+        fun bind(item: Item, context: Context) {
+            image.setImageResource(item.imageId)
+            tvTitle.text = item.titleText
 
-            itemView.setOnClickListener() {
+            itemView.setOnClickListener {
 
                 val intent = Intent(context, ContentActivity::class.java).apply {
-                    putExtra("image", listItem.imageId)
-                    putExtra("title", listItem.titleText)
-                    putExtra("ingredients", listItem.ingredientText)
-                    putExtra("recipe", listItem.recipeText)
+                    putExtra("image", item.imageId)
+                    putExtra("title", item.titleText)
+                    putExtra("ingredients", item.ingredientText)
+                    putExtra("recipe", item.recipeText)
                 }
 
                 context.startActivity(intent)
@@ -53,7 +53,8 @@ class ContentAdapter(itemArray: ArrayList<ListItem>, context: Context) : Recycle
         return itemArrayR.size
     }
 
-    fun updateAdapter(listArray: List<ListItem>) {
+    @SuppressLint("NotifyDataSetChanged")
+    fun updateAdapter(listArray: List<Item>) {
         itemArrayR.clear()
         itemArrayR.addAll(listArray)
         notifyDataSetChanged()

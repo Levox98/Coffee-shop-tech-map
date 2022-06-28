@@ -37,7 +37,7 @@
             <group android:checkableBehavior="single">
                 <item android:title="@string/ctg_summer_drinks"
                     android:id="@+id/id_category_season_summer"
-                    android:icon="@drawable/ic_coffee"/>
+                    android:icon="@drawable/ic_summer_drinks_alternative"/>
                 <item android:title="@string/ctg_winter_drinks"
                     android:id="@+id/id_category_season_winter"
                     android:icon="@drawable/ic_winter_drinks"/>

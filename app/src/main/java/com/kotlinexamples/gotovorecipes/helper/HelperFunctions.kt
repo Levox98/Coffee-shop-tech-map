@@ -7,7 +7,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.kotlinexamples.gotovorecipes.R
 import com.kotlinexamples.gotovorecipes.adapters.ContentAdapter
-import com.kotlinexamples.gotovorecipes.data.ListItem
+import com.kotlinexamples.gotovorecipes.data.Item
 
 fun onCoffeeSelected(resources: Resources, adapter: ContentAdapter?, recyclerView: RecyclerView?,
                      drawerLayout: DrawerLayout?) {
@@ -92,15 +92,15 @@ fun onMenuItemActivated(resources: Resources, adapter: ContentAdapter?,
 
 fun fillInfo(imageArray: IntArray, titleArray: Array<String>,
              ingredientsArray: Array<String>,
-             recipeArray: Array<String>): List<ListItem> {
-    val listItemArray = ArrayList<ListItem>()
+             recipeArray: Array<String>): List<Item> {
+    val itemArray = ArrayList<Item>()
 
     for (i in titleArray.indices) {
-        val listItem = ListItem(imageArray[i], titleArray[i], ingredientsArray[i], recipeArray[i])
-        listItemArray.add(listItem)
+        val item = Item(imageArray[i], titleArray[i], ingredientsArray[i], recipeArray[i])
+        itemArray.add(item)
     }
 
-    return listItemArray
+    return itemArray
 }
 
 fun getImageId(resources: Resources, imageArrayId: Int): IntArray {

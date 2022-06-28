@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.res.Resources
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -13,7 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationView
 import com.kotlinexamples.gotovorecipes.adapters.ContentAdapter
-import com.kotlinexamples.gotovorecipes.data.ListItem
+import com.kotlinexamples.gotovorecipes.data.Item
 import com.kotlinexamples.gotovorecipes.databinding.ActivityMainBinding
 import com.kotlinexamples.gotovorecipes.helper.*
 
@@ -61,13 +62,36 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
         }
 
+        binding.idLayoutMain.btnCoffee.setOnClickListener { onRelaunch(resources, R.array.coffeeImages,
+            R.array.coffeeNames, R.array.coffeeIngredients, R.array.coffeeRecipes) }
+        binding.idLayoutMain.btnTea.setOnClickListener { onRelaunch(resources, R.array.teaImages,
+            R.array.teaNames, R.array.teaIngredients, R.array.teaRecipes) }
+        binding.idLayoutMain.btnCocoa.setOnClickListener { onRelaunch(resources, R.array.cocoaImages,
+            R.array.cocoaNames, R.array.cocoaIngredients, R.array.cocoaRecipes) }
+        binding.idLayoutMain.btnColdDrinks.setOnClickListener { onRelaunch(resources, R.array.cdImages,
+            R.array.cdNames, R.array.cdIngredients, R.array.cdRecipes) }
+        binding.idLayoutMain.btnSmoothie.setOnClickListener { onRelaunch(resources, R.array.smoothieImages,
+            R.array.smoothieNames, R.array.smoothieIngredients, R.array.smoothieRecipes) }
+        binding.idLayoutMain.btnFresh.setOnClickListener { onRelaunch(resources, R.array.freshImages,
+            R.array.freshNames, R.array.freshIngredients, R.array.freshRecipes) }
+        binding.idLayoutMain.btnMilkshake.setOnClickListener { onRelaunch(resources, R.array.milkshakeImages,
+            R.array.milkshakeNames, R.array.milkshakeIngredients, R.array.milkshakeRecipes) }
+        binding.idLayoutMain.btnMulledWine.setOnClickListener { onRelaunch(resources, R.array.mulledWineImages,
+                R.array.mulledWineNames, R.array.mulledWineIngredients, R.array.mulledWineRecipes) }
+        binding.idLayoutMain.btnAuthorDrinks.setOnClickListener { onRelaunch(resources, R.array.adImages,
+            R.array.adNames, R.array.adIngredients, R.array.adRecipes) }
+        binding.idLayoutMain.btnSummerDrinks.setOnClickListener { onRelaunch(resources, R.array.sdImages,
+            R.array.sdNames, R.array.sdIngredients, R.array.sdRecipes) }
+        binding.idLayoutMain.btnWinterDrinks.setOnClickListener { onRelaunch(resources, R.array.wdImages,
+            R.array.wdNames, R.array.wdIngredients, R.array.wdRecipes) }
     }
 
     override fun onBackPressed() {
         if (backPressed + 1000 > System.currentTimeMillis()) {
             super.onBackPressed()
         } else {
-            Toast.makeText(baseContext, "Press once again to exit!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(baseContext, resources.getString(R.string.on_back_press_message),
+                Toast.LENGTH_SHORT).show()
         }
         backPressed = System.currentTimeMillis()
     }
@@ -101,7 +125,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         recyclerView?.hasFixedSize()
         recyclerView?.layoutManager = LinearLayoutManager(this)
-        val list = ArrayList<ListItem>()
+        val list = ArrayList<Item>()
 
         list.addAll(fillInfo(getImageId(resources, R.array.coffeeImages),
             resources.getStringArray(R.array.coffeeNames),
@@ -125,7 +149,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         recyclerView?.hasFixedSize()
         recyclerView?.layoutManager = LinearLayoutManager(this)
-        val list = ArrayList<ListItem>()
+        val list = ArrayList<Item>()
 
         list.addAll(fillInfo(getImageId(resources, imagesArray),
             resources.getStringArray(namesArray),

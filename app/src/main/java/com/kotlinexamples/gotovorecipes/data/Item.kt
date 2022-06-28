@@ -1,6 +1,6 @@
 package com.kotlinexamples.gotovorecipes.data
 
-data class ListItem(
+data class Item(
     var imageId: Int,
     var titleText: String,
     var ingredientText: String,

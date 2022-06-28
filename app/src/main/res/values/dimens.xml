@@ -4,4 +4,5 @@
     <dimen name="item_image_height">100dp</dimen>
     <dimen name="item_image_width">100dp</dimen>
     <dimen name="drawer_width">220dp</dimen>
+    <dimen name="button_icon_size">32dp</dimen>
 </resources>
