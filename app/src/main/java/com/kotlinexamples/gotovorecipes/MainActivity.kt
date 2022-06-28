@@ -12,6 +12,7 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationView
+import com.google.android.material.snackbar.Snackbar
 import com.kotlinexamples.gotovorecipes.adapters.ContentAdapter
 import com.kotlinexamples.gotovorecipes.data.Item
 import com.kotlinexamples.gotovorecipes.databinding.ActivityMainBinding
@@ -72,37 +73,59 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
 
         binding.layoutMain.btnCoffee.setOnClickListener { onRelaunch(resources, R.array.coffeeImages,
-            R.array.coffeeNames, R.array.coffeeIngredients, R.array.coffeeRecipes) }
+            R.array.coffeeNames, R.array.coffeeIngredients, R.array.coffeeRecipes)
+            Snackbar.make(binding.layoutMain.idRecyclerViewMain, "КОФЕ", Snackbar.LENGTH_SHORT).show()
+        }
 
         binding.layoutMain.btnTea.setOnClickListener { onRelaunch(resources, R.array.teaImages,
-            R.array.teaNames, R.array.teaIngredients, R.array.teaRecipes) }
+            R.array.teaNames, R.array.teaIngredients, R.array.teaRecipes)
+            Snackbar.make(binding.layoutMain.idRecyclerViewMain, "ЧАЙ", Snackbar.LENGTH_SHORT).show()
+        }
 
         binding.layoutMain.btnCocoa.setOnClickListener { onRelaunch(resources, R.array.cocoaImages,
-            R.array.cocoaNames, R.array.cocoaIngredients, R.array.cocoaRecipes) }
+            R.array.cocoaNames, R.array.cocoaIngredients, R.array.cocoaRecipes)
+            Snackbar.make(binding.layoutMain.idRecyclerViewMain, "КАКАО/ГОР. ШОКОЛАД", Snackbar.LENGTH_SHORT).show()
+        }
 
         binding.layoutMain.btnColdDrinks.setOnClickListener { onRelaunch(resources, R.array.cdImages,
-            R.array.cdNames, R.array.cdIngredients, R.array.cdRecipes) }
+            R.array.cdNames, R.array.cdIngredients, R.array.cdRecipes)
+            Snackbar.make(binding.layoutMain.idRecyclerViewMain, "ХОЛОДНЫЙ НАПИТКИ", Snackbar.LENGTH_SHORT).show()
+        }
 
         binding.layoutMain.btnSmoothie.setOnClickListener { onRelaunch(resources, R.array.smoothieImages,
-            R.array.smoothieNames, R.array.smoothieIngredients, R.array.smoothieRecipes) }
+            R.array.smoothieNames, R.array.smoothieIngredients, R.array.smoothieRecipes)
+            Snackbar.make(binding.layoutMain.idRecyclerViewMain, "СМУЗИ", Snackbar.LENGTH_SHORT).show()
+        }
 
         binding.layoutMain.btnFresh.setOnClickListener { onRelaunch(resources, R.array.freshImages,
-            R.array.freshNames, R.array.freshIngredients, R.array.freshRecipes) }
+            R.array.freshNames, R.array.freshIngredients, R.array.freshRecipes)
+            Snackbar.make(binding.layoutMain.idRecyclerViewMain, "ФРЕШИ", Snackbar.LENGTH_SHORT).show()
+        }
 
         binding.layoutMain.btnMilkshake.setOnClickListener { onRelaunch(resources, R.array.milkshakeImages,
-            R.array.milkshakeNames, R.array.milkshakeIngredients, R.array.milkshakeRecipes) }
+            R.array.milkshakeNames, R.array.milkshakeIngredients, R.array.milkshakeRecipes)
+            Snackbar.make(binding.layoutMain.idRecyclerViewMain, "МИЛКШЕЙКИ", Snackbar.LENGTH_SHORT).show()
+        }
 
         binding.layoutMain.btnMulledWine.setOnClickListener { onRelaunch(resources, R.array.mulledWineImages,
-                R.array.mulledWineNames, R.array.mulledWineIngredients, R.array.mulledWineRecipes) }
+            R.array.mulledWineNames, R.array.mulledWineIngredients, R.array.mulledWineRecipes)
+            Snackbar.make(binding.layoutMain.idRecyclerViewMain, "ГЛИНТВЕЙН", Snackbar.LENGTH_SHORT).show()
+        }
 
         binding.layoutMain.btnAuthorDrinks.setOnClickListener { onRelaunch(resources, R.array.adImages,
-            R.array.adNames, R.array.adIngredients, R.array.adRecipes) }
+            R.array.adNames, R.array.adIngredients, R.array.adRecipes)
+            Snackbar.make(binding.layoutMain.idRecyclerViewMain, "АВТОРСКИЕ НАПИТКИ", Snackbar.LENGTH_SHORT).show()
+        }
 
         binding.layoutMain.btnSummerDrinks.setOnClickListener { onRelaunch(resources, R.array.sdImages,
-            R.array.sdNames, R.array.sdIngredients, R.array.sdRecipes) }
+            R.array.sdNames, R.array.sdIngredients, R.array.sdRecipes)
+            Snackbar.make(binding.layoutMain.idRecyclerViewMain, "СЕЗОННОЕ МЕНЮ \"ВЕСНА/ЛЕТО\"", Snackbar.LENGTH_SHORT).show()
+        }
 
         binding.layoutMain.btnWinterDrinks.setOnClickListener { onRelaunch(resources, R.array.wdImages,
-            R.array.wdNames, R.array.wdIngredients, R.array.wdRecipes) }
+            R.array.wdNames, R.array.wdIngredients, R.array.wdRecipes)
+            Snackbar.make(binding.layoutMain.idRecyclerViewMain, "СЕЗОННОЕ МЕНЮ \"ОСЕНЬ/ЗИМА\"", Snackbar.LENGTH_SHORT).show()
+        }
     }
 
     override fun onBackPressed() {
