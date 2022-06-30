@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         binding.layoutMain.btnColdDrinks.setOnClickListener { onRelaunch(resources, R.array.cdImages,
             R.array.cdNames, R.array.cdIngredients, R.array.cdRecipes)
-            Snackbar.make(binding.layoutMain.idRecyclerViewMain, "ХОЛОДНЫЙ НАПИТКИ", Snackbar.LENGTH_SHORT).show()
+            Snackbar.make(binding.layoutMain.idRecyclerViewMain, "ХОЛОДНЫЕ НАПИТКИ", Snackbar.LENGTH_SHORT).show()
         }
 
         binding.layoutMain.btnSmoothie.setOnClickListener { onRelaunch(resources, R.array.smoothieImages,
