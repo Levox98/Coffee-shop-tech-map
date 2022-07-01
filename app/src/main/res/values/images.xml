@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="ic_coffee">@drawable/ic_coffee_general</drawable>
+    <drawable name="ic_tea">@drawable/ic_tea_general</drawable>
+    <drawable name="ic_cocoa">@drawable/ic_cocoa_general</drawable>
+    <drawable name="ic_cold_drinks">@drawable/ic_cold_drink_general</drawable>
+    <drawable name="ic_smoothie">@drawable/ic_smoothie_general</drawable>
+    <drawable name="ic_fresh">@drawable/ic_fresh_general</drawable>
+    <drawable name="ic_milkshake">@drawable/ic_milkshake_general</drawable>
+    <drawable name="ic_mulled_wine">@drawable/ic_mulled_wine_general</drawable>
+    <drawable name="ic_summer_drinks">@drawable/ic_summer_drinks_general</drawable>
+</resources>

@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
 import com.kotlinexamples.gotovorecipes.adapters.ContentAdapter
+import com.kotlinexamples.gotovorecipes.adapters.NewAdapter
 import com.kotlinexamples.gotovorecipes.data.Item
 import com.kotlinexamples.gotovorecipes.databinding.ActivityMainBinding
 import com.kotlinexamples.gotovorecipes.helper.*
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private lateinit var binding: ActivityMainBinding
 
-    private var adapter: ContentAdapter? = null
+    private var adapter: NewAdapter? = null
     private var recyclerView: RecyclerView? = null
     private var drawerLayout: DrawerLayout? = null
 
@@ -33,8 +34,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+        onLaunchNew()
+    }
+/*
         if (!isStartedFromIntent()) {
-            onLaunch()
         } else {
             when (intent.getStringExtra(getString(R.string.which_drink))) {
                 R.string.coffee_chosen.toString() -> onRelaunch(resources, R.array.coffeeImages,
@@ -138,6 +142,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         backPressed = System.currentTimeMillis()
     }
 
+
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.category_coffee -> onCoffeeSelected(resources, adapter, recyclerView, drawerLayout)
@@ -174,10 +179,12 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             resources.getStringArray(R.array.coffeeIngredients),
             resources.getStringArray(R.array.coffeeRecipes)))
 
-        adapter = ContentAdapter(list, this)
+        // adapter = ContentAdapter(list, this)
 
         recyclerView?.adapter = adapter
     }
+
+
 
     private fun onRelaunch(resources: Resources, imagesArray: Int, namesArray: Int,
                            ingredientsArray: Int, recipesArray: Int) {
@@ -202,10 +209,31 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         recyclerView?.adapter = adapter
     }
+*/
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        return true
+    }
 
     private fun isStartedFromIntent(): Boolean {
         val i: Intent = intent
 
         return i.getIntExtra(getString(R.string.starting_from_intent), 0) != 0
+    }
+
+    private fun onLaunchNew() {
+
+        binding.idNavigationView.setNavigationItemSelectedListener(this)
+
+        recyclerView = binding.layoutMain.constraintLayoutMain
+            .findViewById(R.id.id_recycler_view_main)
+
+        recyclerView?.hasFixedSize()
+        recyclerView?.layoutManager = LinearLayoutManager(this)
+
+        val coffeeList = getCoffeeArray(this)
+        adapter = NewAdapter(coffeeList, this)
+
+        recyclerView?.adapter = adapter
     }
 }

@@ -1,5 +1,6 @@
 package com.kotlinexamples.gotovorecipes.helper
 
+import android.content.Context
 import android.content.res.Resources
 import android.content.res.TypedArray
 import androidx.core.view.GravityCompat
@@ -8,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.kotlinexamples.gotovorecipes.R
 import com.kotlinexamples.gotovorecipes.adapters.ContentAdapter
 import com.kotlinexamples.gotovorecipes.data.Item
+import com.kotlinexamples.gotovorecipes.data.drinks.*
 
 fun onCoffeeSelected(resources: Resources, adapter: ContentAdapter?, recyclerView: RecyclerView?,
                      drawerLayout: DrawerLayout?) {
@@ -115,4 +117,10 @@ fun getImageId(resources: Resources, imageArrayId: Int): IntArray {
 
     typedArray.recycle()
     return ids
+}
+
+
+fun getCoffeeArray(context: Context): ArrayList<Drink> {
+    return arrayListOf(AmericanoSmall(context), AmericanoBig(context), CappuccinoSmall(context),
+        CappuccinoBig(context))
 }

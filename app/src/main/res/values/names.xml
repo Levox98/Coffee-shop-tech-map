@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    ОБЪЁМЫ
+
+    <integer name="vol250">250</integer>
+    <integer name="vol350">350</integer>
+    <integer name="vol400">400</integer>
+    <integer name="vol500">500</integer>
+
+    КОФЕ
+
+    <string name="americano">Американо</string>
+    <string name="cappuccino">Капучино</string>
+    <string name="latte">Латте</string>
+    <string name="rough">Раф</string>
+    <string name="flat_white">Флэт Уайт</string>
+
+    ЧАЙ
+
+
+</resources>

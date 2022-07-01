@@ -1,6 +1,5 @@
 package com.kotlinexamples.gotovorecipes.adapters
 
-import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
@@ -11,28 +10,29 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.kotlinexamples.gotovorecipes.ContentActivity
 import com.kotlinexamples.gotovorecipes.R
-import com.kotlinexamples.gotovorecipes.data.Item
+import com.kotlinexamples.gotovorecipes.data.drinks.Drink
 
-class ContentAdapter(itemArray: ArrayList<Item>, context: Context) : RecyclerView.Adapter<ContentAdapter.ViewHolder>() {
-    private var itemArrayR = itemArray
+class NewAdapter(drinkArray: ArrayList<Drink>, context: Context) :
+    RecyclerView.Adapter<NewAdapter.ViewHolder>() {
+
+    private var drinkArrayR = drinkArray
     private var contextR = context
 
-
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    class ViewHolder(view: View): RecyclerView.ViewHolder(view) {
         private val image = view.findViewById<ImageView>(R.id.id_content_main_image)
         private val tvTitle = view.findViewById<TextView>(R.id.id_content_name)
 
-        fun bind(item: Item, context: Context) {
-            image.setImageResource(item.imageId)
-            tvTitle.text = item.titleText
+        fun bindContent(drink: Drink, context: Context) {
+            image.setImageResource(drink.imageId)
+            tvTitle.text = drink.name
 
             itemView.setOnClickListener {
 
                 val intent = Intent(context, ContentActivity::class.java).apply {
-                    putExtra("image", item.imageId)
-                    putExtra("title", item.titleText)
-                    putExtra("ingredients", item.ingredientText)
-                    putExtra("recipe", item.recipeText)
+                    putExtra("image", drink.imageId)
+                    putExtra("title", drink.name)
+                    putExtra("ingredients", drink.ingredients)
+                    putExtra("recipe", drink.recipe)
                 }
 
                 context.startActivity(intent)
@@ -46,17 +46,15 @@ class ContentAdapter(itemArray: ArrayList<Item>, context: Context) : RecyclerVie
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(itemArrayR[position], contextR)
+        holder.bindContent(drinkArrayR[position], contextR)
     }
 
     override fun getItemCount(): Int {
-        return itemArrayR.size
+        return drinkArrayR.size
     }
 
-    @SuppressLint("NotifyDataSetChanged")
-    fun updateAdapter(listArray: List<Item>) {
-        itemArrayR.clear()
-        itemArrayR.addAll(listArray)
-        notifyDataSetChanged()
+
+    fun updateNewAdapter(drinkArray: List<Drink>) {
+
     }
 }

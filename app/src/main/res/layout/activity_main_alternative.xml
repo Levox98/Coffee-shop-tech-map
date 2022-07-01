@@ -150,7 +150,7 @@
                     android:contentDescription="btn_summer_drinks"
                     android:text="Летние"
                     android:textSize="8sp"
-                    app:icon="@drawable/ic_summer_drinks_alternative"
+                    app:icon="@drawable/ic_summer_drinks_general"
                     app:iconSize="@dimen/button_icon_size"
                     app:iconTint="@color/ic_coffee_background" />
 

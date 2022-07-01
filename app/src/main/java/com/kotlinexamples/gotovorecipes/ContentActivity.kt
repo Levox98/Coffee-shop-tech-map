@@ -9,13 +9,14 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.navigation.NavigationView
 import com.kotlinexamples.gotovorecipes.adapters.ContentAdapter
+import com.kotlinexamples.gotovorecipes.adapters.NewAdapter
 import com.kotlinexamples.gotovorecipes.databinding.ContentLayoutBinding
 
 class ContentActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     lateinit var binding: ContentLayoutBinding
 
-    private var adapter: ContentAdapter? = null
+    private var adapter: NewAdapter? = null
     private var recyclerView: RecyclerView? = null
     private var drawerLayout: DrawerLayout? = null
 

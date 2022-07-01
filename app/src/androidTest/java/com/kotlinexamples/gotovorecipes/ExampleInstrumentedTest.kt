@@ -2,6 +2,9 @@ package com.kotlinexamples.gotovorecipes
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.kotlinexamples.gotovorecipes.data.drinks.AmericanoSmall
+import com.kotlinexamples.gotovorecipes.data.drinks.Drink
+import com.kotlinexamples.gotovorecipes.helper.getCoffeeArray
 
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -21,5 +24,13 @@ class ExampleInstrumentedTest {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
         assertEquals("com.kotlinexamples.gotovorecipes", appContext.packageName)
 
+        val coffeeList = getCoffeeArray(appContext)
+
+        coffeeList.forEach {
+            println(it.imageId)
+            println(it.name)
+            println(it.ingredients)
+            println(it.recipe)
+        }
     }
 }

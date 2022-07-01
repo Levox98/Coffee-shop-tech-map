@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    СТАКАНЫ
+
+    <string name="green_cup">ЗЕЛЁНЫЙ СТАКАН</string>
+    <string name="yellow_cup">ЖЁЛТЫЙ СТАКАН</string>
+    <string name="black_cup">ЧЁРНЫЙ СТАКАН</string>
+
+     ОСНОВЫ
+
+    <string name="base_espresso">ЭСПРЕССО</string>
+    <string name="base_dopio">ДОПИО</string>
+    <string name="base_triplo">ТРИПЛО</string>
+
+    ИНГРЕДИЕНТЫ
+
+    <string name="water">Вода</string>
+    <string name="milk">Молоко</string>
+
+</resources>
