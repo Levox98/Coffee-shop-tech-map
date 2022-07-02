@@ -7,7 +7,7 @@
 
     <string-array name="cdNames">
         <item>Айс капучино</item>
-        <item>Глиссе</item>
+        <item>Гляссе</item>
     </string-array>
 
     <string-array name="cdIngredients">
@@ -16,8 +16,7 @@
     </string-array>
 
     <string-array name="cdRecipes">
-        <item>Все инргедиенты поместить в блендер,взбить до однородности, перелить в стакан для
-            подачи. Влить кофе</item>
+        <item>В стакан засыпать лёд, сверху молоко, сироп. Влить кофе</item>
         <item>Налить в тару кипятка 1 см до края. Подставить под холдер и влить ДОПИО. Положить
             шарик мороженого в кофе</item>
     </string-array>

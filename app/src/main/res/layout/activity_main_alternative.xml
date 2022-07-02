@@ -166,6 +166,18 @@
                     app:iconSize="@dimen/button_icon_size"
                     app:iconTint="@color/ic_coffee_background" />
 
+                <Button
+                    android:id="@+id/btn_tech"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:backgroundTint="@color/black"
+                    android:contentDescription="btn_technical"
+                    android:text="Тех"
+                    android:textSize="8sp"
+                    app:icon="@android:drawable/btn_star"
+                    app:iconSize="@dimen/button_icon_size"
+                    app:iconTint="@color/ic_coffee_background" />
+
             </LinearLayout>
         </ScrollView>
 

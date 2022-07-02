@@ -72,52 +72,62 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
         }
 
-        binding.layoutMain.btnCoffee.setOnClickListener { onRelaunch(resources, R.array.coffeeImages,
+        binding.layoutMain.btnCoffee.setOnClickListener {
+            onRelaunch(resources, R.array.coffeeImages,
             R.array.coffeeNames, R.array.coffeeIngredients, R.array.coffeeRecipes)
             Snackbar.make(binding.layoutMain.idRecyclerViewMain, "КОФЕ", Snackbar.LENGTH_SHORT).show()
         }
 
-        binding.layoutMain.btnTea.setOnClickListener { onRelaunch(resources, R.array.teaImages,
+        binding.layoutMain.btnTea.setOnClickListener {
+            onRelaunch(resources, R.array.teaImages,
             R.array.teaNames, R.array.teaIngredients, R.array.teaRecipes)
             Snackbar.make(binding.layoutMain.idRecyclerViewMain, "ЧАЙ", Snackbar.LENGTH_SHORT).show()
         }
 
-        binding.layoutMain.btnCocoa.setOnClickListener { onRelaunch(resources, R.array.cocoaImages,
+        binding.layoutMain.btnCocoa.setOnClickListener {
+            onRelaunch(resources, R.array.cocoaImages,
             R.array.cocoaNames, R.array.cocoaIngredients, R.array.cocoaRecipes)
             Snackbar.make(binding.layoutMain.idRecyclerViewMain, "КАКАО/ГОР. ШОКОЛАД", Snackbar.LENGTH_SHORT).show()
         }
 
-        binding.layoutMain.btnColdDrinks.setOnClickListener { onRelaunch(resources, R.array.cdImages,
+        binding.layoutMain.btnColdDrinks.setOnClickListener {
+            onRelaunch(resources, R.array.cdImages,
             R.array.cdNames, R.array.cdIngredients, R.array.cdRecipes)
             Snackbar.make(binding.layoutMain.idRecyclerViewMain, "ХОЛОДНЫЕ НАПИТКИ", Snackbar.LENGTH_SHORT).show()
         }
 
-        binding.layoutMain.btnSmoothie.setOnClickListener { onRelaunch(resources, R.array.smoothieImages,
+        binding.layoutMain.btnSmoothie.setOnClickListener {
+            onRelaunch(resources, R.array.smoothieImages,
             R.array.smoothieNames, R.array.smoothieIngredients, R.array.smoothieRecipes)
             Snackbar.make(binding.layoutMain.idRecyclerViewMain, "СМУЗИ", Snackbar.LENGTH_SHORT).show()
         }
 
-        binding.layoutMain.btnFresh.setOnClickListener { onRelaunch(resources, R.array.freshImages,
+        binding.layoutMain.btnFresh.setOnClickListener {
+            onRelaunch(resources, R.array.freshImages,
             R.array.freshNames, R.array.freshIngredients, R.array.freshRecipes)
             Snackbar.make(binding.layoutMain.idRecyclerViewMain, "ФРЕШИ", Snackbar.LENGTH_SHORT).show()
         }
 
-        binding.layoutMain.btnMilkshake.setOnClickListener { onRelaunch(resources, R.array.milkshakeImages,
+        binding.layoutMain.btnMilkshake.setOnClickListener {
+            onRelaunch(resources, R.array.milkshakeImages,
             R.array.milkshakeNames, R.array.milkshakeIngredients, R.array.milkshakeRecipes)
             Snackbar.make(binding.layoutMain.idRecyclerViewMain, "МИЛКШЕЙКИ", Snackbar.LENGTH_SHORT).show()
         }
 
-        binding.layoutMain.btnMulledWine.setOnClickListener { onRelaunch(resources, R.array.mulledWineImages,
+        binding.layoutMain.btnMulledWine.setOnClickListener {
+            onRelaunch(resources, R.array.mulledWineImages,
             R.array.mulledWineNames, R.array.mulledWineIngredients, R.array.mulledWineRecipes)
             Snackbar.make(binding.layoutMain.idRecyclerViewMain, "ГЛИНТВЕЙН", Snackbar.LENGTH_SHORT).show()
         }
 
-        binding.layoutMain.btnAuthorDrinks.setOnClickListener { onRelaunch(resources, R.array.adImages,
+        binding.layoutMain.btnAuthorDrinks.setOnClickListener {
+            onRelaunch(resources, R.array.adImages,
             R.array.adNames, R.array.adIngredients, R.array.adRecipes)
             Snackbar.make(binding.layoutMain.idRecyclerViewMain, "АВТОРСКИЕ НАПИТКИ", Snackbar.LENGTH_SHORT).show()
         }
 
-        binding.layoutMain.btnSummerDrinks.setOnClickListener { onRelaunch(resources, R.array.sdImages,
+        binding.layoutMain.btnSummerDrinks.setOnClickListener {
+            onRelaunch(resources, R.array.sdImages,
             R.array.sdNames, R.array.sdIngredients, R.array.sdRecipes)
             Snackbar.make(binding.layoutMain.idRecyclerViewMain, "СЕЗОННОЕ МЕНЮ \"ВЕСНА/ЛЕТО\"", Snackbar.LENGTH_SHORT).show()
         }
@@ -125,6 +135,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         binding.layoutMain.btnWinterDrinks.setOnClickListener { onRelaunch(resources, R.array.wdImages,
             R.array.wdNames, R.array.wdIngredients, R.array.wdRecipes)
             Snackbar.make(binding.layoutMain.idRecyclerViewMain, "СЕЗОННОЕ МЕНЮ \"ОСЕНЬ/ЗИМА\"", Snackbar.LENGTH_SHORT).show()
+        }
+
+        binding.layoutMain.btnTech.setOnClickListener {
+            startActivity(Intent(this, TechInfoActivity::class.java))
         }
     }
 
